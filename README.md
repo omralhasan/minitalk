@@ -1,12 +1,12 @@
-_This project has been created as part of the 42 curriculum by oalshbou._
+_This project has been created as part of the 42 curriculum by oalhasan._
 
 # Minitalk
 
 ## Description
 
-**Minitalk** is a communication program implemented in C that establishes a data exchange channel between a client and a server using strictly UNIX signals.
+**Minitalk** is a communication program implemented in C that establishes a data-exchange channel between a client and a server using strictly UNIX signals.
 
-The goal is to understand Inter-Process Communication (IPC) without using standard methods like pipes or sockets. instead, the project uses `SIGUSR1` and `SIGUSR2` to transmit data bit-by-bit. The server launches first and waits for signals, while the client takes a string and a Process ID (PID) to send the message.
+The goal is to understand Inter-Process Communication (IPC) without using standard methods like pipes or sockets. Instead, the project uses `SIGUSR1` and `SIGUSR2` to transmit data bit-by-bit. The server launches first and waits for signals, while the client takes a string and a Process ID (PID) to send the message.
 
 ## Instructions
 
@@ -14,24 +14,18 @@ The goal is to understand Inter-Process Communication (IPC) without using standa
 
 To compile the project, run the following command in the root of the repository:
 
-```
-make
-
-```
+    make
 
 This will generate two executables:
 
-    server
-
-    client
+- `server`
+- `client`
 
 Optional cleaning rules:
 
-    make clean: Removes object files (.o).
-
-    make fclean: Removes object files and the executables.
-
-    make re: Recompiles the entire project from scratch.
+- `make clean`: Removes object files (`.o`).
+- `make fclean`: Removes object files and the executables.
+- `make re`: Recompiles the entire project from scratch.
 
 Usage
 
