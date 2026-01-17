@@ -36,19 +36,16 @@ Optional cleaning rules:
 Usage
 
 1. Start the Server Run the server first. It will print its PID.
-   Bash
 
 ./server
 
 Output Example: Server PID: 9876
 
 2. Run the Client Open a new terminal. Run the client using the PID provided by the server and the string you wish to send.
-   Bash
 
 ./client <PID> <MESSAGE>
 
 Example:
-Bash
 
 ./client 9876 "Hello, 42 World!"
 
