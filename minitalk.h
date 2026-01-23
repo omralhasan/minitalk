@@ -3,39 +3,32 @@
 /*                                                        :::      ::::::::   */
 /*   minitalk.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oalshbou <oalshbou@student.42amman.com>    +#+  +:+       +#+        */
+/*   By: oalhasan <oalhasan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/16 16:55:38 by oalhasan          #+#    #+#             */
-/*   Updated: 2026/01/17 23:09:21 by oalshbou         ###   ########.fr       */
+/*   Updated: 2026/01/23 19:56:38 by oalhasan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MINITALK_H
-#define MINITALK_H
+# define MINITALK_H
 
-#define _POSIX_C_SOURCE 200809L
-#define _GNU_SOURCE
-#define BUFFER_SIZE 2048
+# define _GNU_SOURCE
+# include "./ft_printf/ft_printf.h"
+# include "ft_printf/libft/libft.h"
+# include <signal.h>
+# include <stdio.h>
+# include <stdlib.h>
+# include <unistd.h>
 
 typedef struct s_server
 {
-  int ch;
-  int bit;
-  // char buffer[BUFFER_SIZE];
-  // int bufeer_index;
-} t_server;
+	int		ch;
+	int		bit;
+}			t_server;
 
-#include <unistd.h>
-#include <stdlib.h>
-#include <signal.h>
-#include <stdio.h>
-#include "./ft_printf/ft_printf.h"
-#include "ft_printf/libft/libft.h"
-
-void handler(int sig , siginfo_t *info , void *context);
-void char_send(int pid, unsigned char ch);
-void ack_handler(int sig);
-
-t_server server;
+void		handler(int sig, siginfo_t *info, void *context);
+void		char_send(int pid, unsigned char ch);
+void		ack_handler(int sig);
 
 #endif
